@@ -104,7 +104,7 @@ export default function CardDetail() {
           </Box>
           <Box>
             <Heading as="h3">{product.name}</Heading>
-            <Paragprah>{product.url}</Paragprah>
+            <a href={product.url}>{product.url}</a>
           </Box>
         </Box>
         <Box className="card__body">
@@ -128,7 +128,9 @@ export default function CardDetail() {
           </Box>
         </Box>
       </StyledCardDetail>
-      <Button onClick={toggleModal}>Ubah</Button>
+      <Button onClick={toggleModal} type="outline">
+        Ubah
+      </Button>
       <Modal isOpen={modal} onRequestClose={toggleModal}>
         <Heading as="h2" mb="1" align="center">
           Ubah Data Toko

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { css } from "styled-components";
 
 const Button = styled.button`
   padding: 0.8rem;
@@ -11,6 +12,18 @@ const Button = styled.button`
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
+
+  // PROPS TYPE
+  ${({ type }) => {
+    if (type === "outline") {
+      console.log("outline");
+      return css`
+        background-color: #fff;
+        color: ${({ theme }) => theme.colors.primary};
+        border: 1px solid ${({ theme }) => theme.colors.primary};
+      `;
+    }
+  }}
 `;
 
 export default Button;
