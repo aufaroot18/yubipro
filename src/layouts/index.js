@@ -1,11 +1,9 @@
-import Container from "../components/ui/Container";
+import Main from "../components/Main";
 
 export default function Layout({ children }) {
   return (
     <>
-      <main>
-        <Container>{children}</Container>
-      </main>
+      <Main>{children}</Main>
     </>
   );
 }
