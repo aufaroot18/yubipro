@@ -1,9 +1,12 @@
+import Layout from "./layouts";
 import Routing from "./routes";
 
 function App() {
   return (
     <>
-      <Routing />
+      <Layout>
+        <Routing />
+      </Layout>
     </>
   );
 }
