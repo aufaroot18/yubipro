@@ -1,28 +1,19 @@
-import styled from "styled-components";
 import Heading from "../ui/Heading";
 import Image from "../ui/Image";
 import Paragprah from "../ui/Paragraph";
 import logo from "../../assets/img/logo.png";
-
-const StyledHeader = styled.header`
-  text-align: center;
-  margin-top: 1rem;
-  margin-bottom: 3rem;
-
-  img {
-    margin-bottom: 1rem;
-  }
-
-  h2 {
-    margin-bottom: 0.5rem;
-  }
-`;
+import Box from "../ui/Box";
+import StyledHeader from "./Index.styled";
 
 function Header({ title, description }) {
   return (
     <StyledHeader>
-      <Image src={logo} alt="logo" />
-      <Heading as="h2">{title}</Heading>
+      <Box mb="1">
+        <Image src={logo} alt="logo" />
+      </Box>
+      <Heading as="h2" mb="0.5">
+        {title}
+      </Heading>
       <Paragprah>{description}</Paragprah>
     </StyledHeader>
   );
