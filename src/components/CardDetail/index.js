@@ -2,7 +2,6 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Modal from "../ui/Modal";
-import styled from "styled-components";
 import Button from "../ui/Button";
 import Box from "../ui/Box";
 import Paragprah from "../ui/Paragraph";
@@ -14,37 +13,7 @@ import Input from "../ui/Input";
 import Select from "../ui/Select";
 import channels from "../../utils/constants/channels";
 import categories from "../../utils/constants/categories";
-
-const StyledCardDetail = styled.div`
-  border: 1px solid ${({ theme }) => theme.colors.gray};
-  border-radius: 5px;
-  overflow: hidden;
-  margin-bottom: 2rem;
-
-  .card__header {
-    padding: 1rem;
-    display: flex;
-    align-items: center;
-    background-color: #ebf4fc;
-
-    img {
-      margin-right: 1rem;
-    }
-  }
-
-  .card__body {
-    padding: 1rem;
-  }
-
-  .card__label {
-    font-size: 0.7rem;
-    margin-bottom: 0.5rem;
-  }
-
-  .card__content {
-    color: ${({ theme }) => theme.colors.black};
-  }
-`;
+import StyledCardDetail from "./Index.styled";
 
 export default function CardDetail() {
   const { id } = useParams();
@@ -99,7 +68,7 @@ export default function CardDetail() {
     <>
       <StyledCardDetail>
         <Box className="card__header" mb="1">
-          <Box>
+          <Box mr="1">
             <Image src={storePhoto} alt={product.name} />
           </Box>
           <Box>
@@ -107,24 +76,30 @@ export default function CardDetail() {
             <a href={product.url}>{product.url}</a>
           </Box>
         </Box>
-        <Box className="card__body">
+        <Box p="1">
           <Box mb="1">
-            <Paragprah className="card__label">Detail Alamat</Paragprah>
-            <Paragprah className="card__content">{product.address}</Paragprah>
-          </Box>
-          <Box mb="1">
-            <Paragprah className="card__label">Kode POS</Paragprah>
-            <Paragprah className="card__content">{product.postal}</Paragprah>
-          </Box>
-          <Box mb="1">
-            <Paragprah className="card__label">Kategori Bisnis</Paragprah>
-            <Paragprah className="card__content">{product.category}</Paragprah>
-          </Box>
-          <Box mb="1">
-            <Paragprah className="card__label">Saluran Penjualan</Paragprah>
-            <Paragprah className="card__content">
-              {product.sales_channel}
+            <Paragprah size="0.7" mb="0.5">
+              Detail Alamat
             </Paragprah>
+            <Paragprah color="black">{product.address}</Paragprah>
+          </Box>
+          <Box mb="1">
+            <Paragprah size="0.7" mb="0.5">
+              Kode POS
+            </Paragprah>
+            <Paragprah color="black">{product.postal}</Paragprah>
+          </Box>
+          <Box mb="1">
+            <Paragprah size="0.7" mb="0.5">
+              Kategori Bisnis
+            </Paragprah>
+            <Paragprah color="black">{product.category}</Paragprah>
+          </Box>
+          <Box mb="1">
+            <Paragprah size="0.7" mb="0.5">
+              Saluran Penjualan
+            </Paragprah>
+            <Paragprah color="black">{product.sales_channel}</Paragprah>
           </Box>
         </Box>
       </StyledCardDetail>
