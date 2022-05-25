@@ -8,6 +8,9 @@ const Main = styled.main`
   overflow: hidden;
   padding-left: 3rem;
   padding-right: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 `;
 
 export default Main;
