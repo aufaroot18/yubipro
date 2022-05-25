@@ -60,7 +60,7 @@ export default function CardDetail() {
     e.preventDefault();
     const url = `https://6285e14df0e8f0bb7c0b0de3.mockapi.io/api/v1/store/${product.id}`;
     await axios.put(url, formData);
-    setProduct({ ...formData });
+    setProduct({ ...formData, id: product.id });
     toggleModal();
   }
 
