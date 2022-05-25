@@ -1,9 +1,10 @@
 const channels = [
+  "Toko Offline",
+  "Toko Online",
   "Marketplace",
-  "Offline",
-  "Facebook",
+  "Whatsapp",
   "Instagram",
-  "Yukbisnis",
+  "Facebook",
 ];
 
 export default channels;

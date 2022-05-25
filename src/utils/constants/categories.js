@@ -1,2 +1,9 @@
-const categories = ["Fashion", "Food", "Book", "Accessories", "Gold"];
+const categories = [
+  "Agrobisnis",
+  "Elektronik",
+  "Fashion",
+  "Kesehatan",
+  "Mainan & Hobi",
+  "Olahraga",
+];
 export default categories;
