@@ -17,7 +17,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     background-color: #f5f9fe;
-    font-family: 'Poppins', sans-serif;
+    font-family: ${({ theme }) => theme.fonts.primary}, sans-serif;
   }
 
   a {

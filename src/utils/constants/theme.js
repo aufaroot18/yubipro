@@ -5,6 +5,11 @@ const theme = {
     gray: "#847F82",
     info: "#3C91E6",
   },
+
+  fonts: {
+    primary: "Poppins",
+    secondary: "",
+  },
 };
 
 export default theme;
