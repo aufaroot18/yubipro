@@ -26,12 +26,8 @@ export default function AddFormProduct() {
     setFormData({ ...formData, [name]: value });
   }
 
-  function submitForm(e) {
+  async function createProduct(e) {
     e.preventDefault();
-    createProduct();
-  }
-
-  async function createProduct() {
     const url = "https://6285e14df0e8f0bb7c0b0de3.mockapi.io/api/v1/store";
     const { data: product } = await axios.post(url, formData);
     navigate(`/products/${product.id}`, { replace: true });
@@ -42,7 +38,7 @@ export default function AddFormProduct() {
       <Heading as="h3" mb="1">
         Data Toko
       </Heading>
-      <form onSubmit={submitForm}>
+      <form onSubmit={createProduct}>
         <Box mb="1">
           <Label htmlFor="name">Nama</Label>
           <Input
