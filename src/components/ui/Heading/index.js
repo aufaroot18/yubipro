@@ -1,7 +1,9 @@
 import styled from "styled-components";
 
 const Heading = styled.h1`
+  font-weight: ${({ weight }) => weight && weight};
   color: ${({ theme }) => theme.colors.black};
+
   margin-bottom: ${({ mb }) => mb && `${mb}rem`};
   margin-top: ${({ mt }) => mt && `${mt}rem`};
   margin-right: ${({ mr }) => mr && `${mr}rem`};

@@ -16,7 +16,6 @@ const Button = styled.button`
   // PROPS TYPE
   ${({ type }) => {
     if (type === "outline") {
-      console.log("outline");
       return css`
         background-color: #fff;
         color: ${({ theme }) => theme.colors.primary};
