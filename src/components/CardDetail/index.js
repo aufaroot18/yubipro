@@ -60,7 +60,11 @@ export default function CardDetail() {
     e.preventDefault();
     const url = `https://6285e14df0e8f0bb7c0b0de3.mockapi.io/api/v1/store/${product.id}`;
     await axios.put(url, formData);
-    setProduct({ ...formData, id: product.id });
+    setProduct({
+      ...formData,
+      id: product.id,
+    });
+
     toggleModal();
   }
 
@@ -164,7 +168,12 @@ export default function CardDetail() {
           </Heading>
           <Box mb="1">
             <Label htmlFor="category">category Bisnis</Label>
-            <Select name="category" id="category">
+            <Select
+              name="category"
+              id="category"
+              onChange={handleChange}
+              value={formData.category}
+            >
               {categories.map((item) => {
                 return (
                   <option value={item} key={item}>
@@ -176,7 +185,12 @@ export default function CardDetail() {
           </Box>
           <Box mb="1">
             <Label htmlFor="sales_channel">Channel Penjualan</Label>
-            <Select name="sales_channel" id="sales_channel">
+            <Select
+              name="sales_channel"
+              id="sales_channel"
+              onChange={handleChange}
+              value={formData.sales_channel}
+            >
               {channels.map((item) => {
                 return (
                   <option value={item} key={item}>
